@@ -42,7 +42,7 @@ sbibd -v 15 -r 7 -l 3
 ```
 ❯ sbibd -v 15 -r 7 -l 3 -d
 
-[SUCCESS] Difference Set modulo 7:
+[SUCCESS] Difference set modulo 15:
 
      4     6     9    10    12    13    14
 
