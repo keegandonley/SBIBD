@@ -20,17 +20,18 @@ npm install -g sbibd
 
 ### Usage
 ```
-  Options:
-	-V, --version      output the version number
-	-v, --vVal <vVal>  The value for param v
-	-r, --rVal <rVal>  The value for param r
-	-l, --lVal <lVal>  The value for param λ
-	-h, --help         output usage information
+Options:
+  -V, --version       output the version number
+  -v, --vVal <value>  The value for param v
+  -r, --rVal <value>  The value for param r
+  -l, --lVal <value>  The value for param λ
+  -s, --skip <n>      Skip the first n valid starting blocks
+  -d, --difference    Output the difference set used to generate the starting block
+  -h, --help          output usage information
 ```
-**Basic usage:**
-```
-sbibd -v 15 -r 7 -l 3
-```
+
+If a skip value is given, the first n valid starting blocks discovered will be skipped 
+
 
 **Basic usage:**
 ```
@@ -39,7 +40,29 @@ sbibd -v 15 -r 7 -l 3
 
 **Sample run:**
 ```
-❯ sbibd -v 15 -r 7 -l 3
+❯ sbibd -v 15 -r 7 -l 3 -d
+
+[SUCCESS] Difference Set modulo 7:
+
+     4     6     9    10    12    13    14
+
+ 4   0    13    10     9     7     6     5
+
+ 6   2     0    12    11     9     8     7
+
+ 9   5     3     0    14    12    11    10
+
+10   6     4     1     0    13    12    11
+
+12   8     6     3     2     0    14    13
+
+13   9     7     4     3     1     0    14
+
+14  10     8     5     4     2     1     0
+
+
+[SUCCESS] Symmetric BIBD:
+
  0: {  0,   2,   5,   6,   8,   9,  10 }
  1: {  1,   3,   6,   7,   9,  10,  11 }
  2: {  2,   4,   7,   8,  10,  11,  12 }
