@@ -1,4 +1,5 @@
 const { getPossibleValues, checkValidity, findBlockDesign } = require('./coreLogic.js');
+const { padValue } = require('./draw.js');
 
 test('gets all possible values given a v', () => {
 	expect(getPossibleValues(15)).toEqual([ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ]);
@@ -25,4 +26,14 @@ test('finds the second starting block for a valid configuration', () => {
 	const input = getPossibleValues(15);
 	const result = findBlockDesign(input, 15, 3, 7, 1);
 	expect(result.result).toEqual([ 1, 2, 5, 7, 12, 13, 14 ]);
+});
+
+test('pads values of length 1', () => {
+	const result = padValue(1);
+	expect(result).toEqual(' 1');
+});
+
+test('doesn\'t pad values of length 2', () => {
+	const result = padValue(10);
+	expect(result).toEqual('10');
 });
