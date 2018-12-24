@@ -4,7 +4,8 @@
   "description": "<div align=\"center\">",
   "main": "BIBD.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --coverage",
+    "lint": "eslint src"
   },
   "bin": {
     "SBIBD": "src/index.js"
@@ -18,7 +19,10 @@
     "distinct-colors": "^1.0.4",
     "js-combinatorics": "^0.5.4"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^5.11.0",
+    "jest": "^23.6.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/keegandonley/SBIBD.git"
