@@ -81,7 +81,7 @@ sbibd -v 15 -r 7 -l 3
 ```
 
 ### Mathematics
-Basic validation is performed to eliminate the need to wait for costly runs of the algorithm if the configuration is valid.
+Basic validation is performed to eliminate the need to wait for costly runs of the algorithm if the configuration is invalid.
 
 While this program only works for symmetric balanced incomplete block designs, the necessary conditions for the existence a (<em>v</em>, <em>b</em>, <em>r</em>, <em>k</em>, λ)-BIBD are checked first:
 ```
